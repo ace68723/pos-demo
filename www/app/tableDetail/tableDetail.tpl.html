@@ -1,0 +1,47 @@
+
+<ion-view class="tabs-item-hide" title="Order">
+	
+	<ion-content class="padding">
+        <ion-list>
+         	<ion-item>
+         	  <div class="row" >
+         	  <div class="col col-50" >
+         	          <div class=" ">
+         	             Items: 
+         	          </div>
+         	      </div> 
+         	      <div class="col" >
+         	          <div class=" ">
+         	              Quantity:
+         	          </div>
+         	      </div> 
+         	      <div class="col" >
+         	          <div class=" ">
+         	              Price:
+         	          </div>
+         	      </div>
+         	  </div>
+         	</ion-item>
+
+    	    <ion-item ng-if="order.quantity > 0" ng-repeat="(id, order) in tableDetailCtrl.order ">
+    	        <div class="row" ng-click="tableDetailCtrl.add(id)">
+    	        <div class="col col-50" >
+    	                <div class=" ">
+    	                   {{order.name}} 
+    	                </div>
+    	            </div> 
+    	            <div class="col" >
+    	                <div class=" ">
+    	                    {{order.quantity}}
+    	                </div>
+    	            </div> 
+    	            <div class="col" >
+    	                <div class=" ">
+    	                    {{order.price}}
+    	                </div>
+    	            </div>
+    	        </div>
+    	    </ion-item>
+        </ion-list>
+  </ion-content>
+</ion-view>

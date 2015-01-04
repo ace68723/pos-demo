@@ -1,0 +1,64 @@
+/* Empty. Add your own CSS if you like */
+.table {
+	/*position: relative;
+	left: 1px;*/
+	margin: 5px;
+	width: 160px;
+}
+.checkOrder {
+	position: absolute;
+	top: 68%;
+	z-index: 10;
+	width: 100%;
+}
+.confirm {
+	position: absolute;
+	top: 58%;
+	z-index: 10;
+}
+.checkOut {
+	position: absolute;
+	top: 78%;
+	z-index: 10;
+}
+
+.ctrl-button{
+	position: absolute;
+	bottom: 14%;
+	width: 100%;
+}
+
+.tabs {
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -moz-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-direction: normal;
+-webkit-box-orient: horizontal;
+-webkit-flex-direction: horizontal;
+-moz-flex-direction: horizontal;
+-ms-flex-direction: horizontal;
+flex-direction: horizontal;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+-moz-justify-content: center;
+justify-content: center;
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+border-color: #b2b2b2;
+background-color: #f8f8f8;
+background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
+color: #444;
+position: absolute;
+bottom: 0;
+z-index: 5;
+width: 100%;
+height: 70px;
+border-style: solid;
+border-top-width: 1px;
+background-size: 0;
+line-height: 49px;
+}

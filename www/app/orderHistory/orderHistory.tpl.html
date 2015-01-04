@@ -1,0 +1,62 @@
+
+<ion-view class="tabs-item-hide" title="Order">
+	
+	<ion-content class="padding">
+    <ion-list ng-repeat="(id, orderTimes) in tableDetailCtrl.orderHistory ">
+        <ion-item>
+            <div  class="row" >
+                <div class="col col-25" >
+                    <div  class=" ">
+                       Date: {{orderTimes.date.month}}/{{orderTimes.date.date}}
+                       {{orderTimes.date.hours}}:{{orderTimes.date.minutes}}
+                    </div>
+                </div> 
+                <div class="col col-25" >
+                    <div class=" ">
+                       SubTotal:{{orderTimes.subTotal | currency}}
+                    </div>
+                </div> 
+                
+            </div>
+          <div class="row" >
+          <div class="col col-50" >
+                  <div class=" ">
+                     Items: 
+                  </div>
+              </div> 
+              <div class="col" >
+                  <div class=" ">
+                      Quantity:
+                  </div>
+              </div> 
+              <div class="col" >
+                  <div class=" ">
+                      Price:
+                      
+                  </div>
+              </div>
+          </div>
+        </ion-item>
+
+        <ion-item  ng-repeat="(id, order) in orderTimes.order">
+            <div class="row" >
+            <div class="col col-50" >
+                    <div class=" ">
+                       {{order.name}} 
+                    </div>
+                </div> 
+                <div class="col" >
+                    <div class=" ">
+                        {{order.quantity}}
+                    </div>
+                </div> 
+                <div class="col" >
+                    <div class=" ">
+                        {{order.price}}
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

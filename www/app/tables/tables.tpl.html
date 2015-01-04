@@ -1,0 +1,21 @@
+<ion-view  view-title="Tables">
+  
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Tables</div>
+      <div class="item item-body">
+        
+          <a  ng-repeat="(id, table) in tablesCtrl.tables "
+                    class=" table button"
+                    ng-class="{' button-outline button-positive': table.status == 0,
+                                'button-positive': table.status == 1}"
+                    href="#/tab/tables/{{table.tableID}}"
+          >
+            Table {{table.tableID}}
+          </a>      
+        
+      </div>
+    </div>
+    
+  </ion-content>
+</ion-view>
