@@ -1,0 +1,24 @@
+
+<ion-view >
+  <ion-content>
+    <h1>Side Menu
+      {{smc.tl[smc.tid].status}}
+    </h1>
+  </ion-content >
+  <div class="ctrl-button" ng-show="smc.tid !== undefined">
+    
+    <button  ng-click="smc.back()" class=" ctrl-Button button button-full button-positive">
+      Back
+    </button>
+    <button ng-show="smc.tl[smc.tid].tableInfo.status == 1" ng-click="smc.confirm()" class=" ctrl-Button button button-full button-positive">
+      Confirm
+    </button>
+    <button ng-hide="smc.showOH" ng-click="smc.showOH2()" class=" ctrl-Button button button-full button-positive">
+      Check Order
+    </button>
+
+    <button ng-show="smc.showOH" class=" ctrl-Button button button-full button-positive">
+     CheckOut
+    </button>
+  </div>
+</ion-view>

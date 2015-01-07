@@ -10,6 +10,8 @@ angular.module('starter',
   'firebase.config',
   'TablesCtrl', 
   'TableDetailCtrl',
+  'OrderHistoryCtrl',
+  'SideMenuCtrl',
   'starter.services',
   'firebase.services'
   ])
@@ -54,35 +56,11 @@ angular.module('starter',
         controller: 'tablesCtrl as tablesCtrl'
       },
         'tab-tables-detail':{
-            templateUrl: 'app/tables/tablesSideMenu.tpl.html',
-            controller: 'sideMenuCtrl as sideMenuCtrl'
+            templateUrl: 'app/sideMenu/sideMenu.tpl.html',
+            controller: 'sideMenuCtrl as smc'
         }    
     }
   })
-  
-
-  .state('tab.tableDetail', {
-      url: '/tables/:tableId',
-      views: {
-        'tab-tables': {
-          templateUrl: 'app/tableDetail/tableDetail.tpl.html',
-          controller: 'tableDetailCtrl as tableDetailCtrl'
-        },
-        'tab-tables-detail':{
-            templateUrl: 'app/tables/tablesSideMenu.tpl.html',
-            controller: 'sideMenuCtrl as sideMenuCtrl'
-        } 
-      }
-    })
-  .state('tab.orderHistory', {
-      url: '/tables/:tableId/orderHistory',
-      views: {
-        'tab-tables': {
-          templateUrl: 'app/orderHistory/orderHistory.tpl.html',
-          controller: 'tableDetailCtrl as tableDetailCtrl'
-        }
-      }
-    })
   .state('tab.chats', {
       url: '/chats',
       views: {

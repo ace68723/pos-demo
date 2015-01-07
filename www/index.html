@@ -12,11 +12,13 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-    <!-- ionic/angularjs js -->
+    <!-- library -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/firebase/firebase.js"></script>
     <script src="lib/angularfire/dist/angularfire.js"></script>
     <script src="lib/ionic/js/ionic-multiple-views.js"></script>
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
@@ -27,8 +29,12 @@
     <script src="app/firebase/firebaseUtils.js"></script>
     <script src="app/firebase/firebaseService.js"></script>
 
+    <!-- controllers -->
     <script src="app/tables/tablesCtrl.js"></script>
     <script src="app/tableDetail/tableDetailCtrl.js"></script>
+    <script src="app/orderhistory/orderHistoryCtrl.js"></script>
+
+    <script src="app/sideMenu/sideMenuCtrl.js"></script>
 
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
@@ -39,8 +45,8 @@
     -->
 
       <ion-nav-bar class="bar-positive col col-75">
-        <ion-nav-back-button>
-        </ion-nav-back-button>
+      <!--   <ion-nav-back-button>
+        </ion-nav-back-button> -->
       </ion-nav-bar>
     
     <!--

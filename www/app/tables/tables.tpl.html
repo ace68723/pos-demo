@@ -7,9 +7,9 @@
         
           <a  ng-repeat="(id, table) in tablesCtrl.tables "
                     class=" table button"
-                    ng-class="{' button-outline button-positive': table.status == 0,
-                                'button-positive': table.status == 1}"
-                    href="#/tab/tables/{{table.tableID}}"
+                    ng-class="{' button-outline button-positive': table.tableInfo.status == 0,
+                                'button-positive': table.tableInfo.status == 1}"
+                    href="#/tab/tables/{{id}}"
           >
             Table {{table.tableID}}
           </a>      
