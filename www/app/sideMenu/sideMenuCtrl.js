@@ -12,6 +12,8 @@ angular.module('SideMenuCtrl', ['firebase.utils'])
   smc.aoh = syncOrderHistory.syncOH(smc.tid);
   smc.co = orderList.getOrder(smc.tid);
   smc.orderHistory = orderList.orderHistory(tid);
+
+  console.log($stateParams)
   smc.showOH2 = function  () {
     $location.path("/tab/tables/" + smc.tid + "/orderHistory")
     smc.showOH = true;
@@ -49,7 +51,7 @@ angular.module('SideMenuCtrl', ['firebase.utils'])
     var i = 0;
     smc.co = _.forEach(smc.co, 
                             function(order){ 
-                                  if(order.quantity > 0){ 
+                                if(order.quantity > 0){ 
                                     
                                     order.quantity=0
                                      smc.co.$save(i)
@@ -59,7 +61,7 @@ angular.module('SideMenuCtrl', ['firebase.utils'])
                                     return
                                   }
                             });
-      smc.tinfo.status = 0
+      smc.tinfo.status = 1  
        smc.tinfo.$save();
      $location.path("/tab/tables/" + smc.tid + "/orderHistory")
   }    

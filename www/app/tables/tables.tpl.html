@@ -1,18 +1,18 @@
 <ion-view  view-title="Tables">
   
-  <ion-content class="padding">
+  <ion-content class="padding" scroll="false">
     <div class="list card">
       <div class="item item-divider">Tables</div>
       <div class="item item-body">
         
-          <a  ng-repeat="(id, table) in tablesCtrl.tables "
+          <button  ng-repeat="(id, table) in tablesCtrl.tables "
                     class=" table button"
-                    ng-class="{' button-outline button-positive': table.tableInfo.status == 0,
-                                'button-positive': table.tableInfo.status == 1}"
-                    href="#/tab/tables/{{id}}"
+                    ng-class="{' button-outline button-positive': table.tableInfo.status == 1,
+                                'button-positive': table.tableInfo.status == 2}"
+                    ng-click="tablesCtrl.toTable(id)"
           >
-            Table {{table.tableID}}
-          </a>      
+            Table {{table.tableInfo.tableID}} {{table.tableInfo.status}}
+          </button>      
         
       </div>
     </div>

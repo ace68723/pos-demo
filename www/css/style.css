@@ -62,3 +62,18 @@ border-top-width: 1px;
 background-size: 0;
 line-height: 49px;
 }
+.bt-up {
+	position: absolute;
+	right: 10px;
+	bottom: 150px;
+	z-index: 10;
+	width: 90px;
+}
+
+.bt-down {
+	position: absolute;
+	right: 10px;
+	bottom: 100px;
+	z-index: 10;
+	width: 90px;
+}
